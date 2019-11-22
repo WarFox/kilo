@@ -226,16 +226,23 @@ void editorRefreshScreen() {
 void editorMoveCursor(int key) {
   switch (key) {
   case ARROW_LEFT:
-    E.cx--;
+    if (E.cx != 0) {
+      E.cx--;
+    }
     break;
   case ARROW_RIGHT:
-    E.cx++;
+    if (E.cx != E.screencols - 1) {
+      E.cx++;
+    }
     break;
   case ARROW_UP:
-    E.cy--;
-    break;
+    if (E.cy != 0) {
+      break;
+    }
   case ARROW_DOWN:
-    E.cy++;
+    if (E.cy != E.screenrows - 1) {
+      E.cy++;
+    }
     break;
   }
 }
