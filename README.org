@@ -1,0 +1,4 @@
+#+title: Kilo editor
+
+Following the steps in
+https://viewsourcecode.org/snaptoken/kilo/
